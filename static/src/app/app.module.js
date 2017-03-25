@@ -7,7 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
+var sign_in_component_1 = require("./sign-in/sign-in.component");
+var page_not_found_component_1 = require("./page-not-found/page-not-found.component");
+var appRoutes = [
+    { path: 'sign-in', component: sign_in_component_1.SignInComponent },
+    //{ path: 'hero/:id',      component: HeroDetailComponent },
+    // {
+    //   path: 'heroes',
+    //   component: HeroListComponent,
+    //   data: { title: 'Heroes List' }
+    // },
+    { path: '',
+        redirectTo: '/sign-in',
+        pathMatch: 'full'
+    },
+    { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -15,8 +33,16 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            router_1.RouterModule.forRoot(appRoutes)
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            sign_in_component_1.SignInComponent,
+            page_not_found_component_1.PageNotFoundComponent,
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

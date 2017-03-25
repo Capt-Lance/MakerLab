@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'sign-in',
-  templateUrl: `./sign-in.html`,
+  templateUrl: `src/app/sign-in/sign-in.html`,
 })
-export class SignIn  { 
-    
+export class SignInComponent  { 
+    private userName: string;
+    private password: string;
+    private email:string;
  }
