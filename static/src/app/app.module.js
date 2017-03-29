@@ -9,11 +9,15 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
+var animations_1 = require("@angular/platform-browser/animations");
+var primeng_1 = require("primeng/primeng");
 var app_component_1 = require("./app.component");
 var sign_in_component_1 = require("./sign-in/sign-in.component");
+var calendar_component_1 = require("./calendar/calendar.component");
 var page_not_found_component_1 = require("./page-not-found/page-not-found.component");
 var appRoutes = [
     { path: 'sign-in', component: sign_in_component_1.SignInComponent },
+    { path: 'calendar', component: calendar_component_1.CalendarComponent },
     //{ path: 'hero/:id',      component: HeroDetailComponent },
     // {
     //   path: 'heroes',
@@ -36,11 +40,14 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            router_1.RouterModule.forRoot(appRoutes)
+            router_1.RouterModule.forRoot(appRoutes),
+            primeng_1.CalendarModule,
+            animations_1.BrowserAnimationsModule,
         ],
         declarations: [
             app_component_1.AppComponent,
             sign_in_component_1.SignInComponent,
+            calendar_component_1.CalendarComponent,
             page_not_found_component_1.PageNotFoundComponent,
         ],
         bootstrap: [app_component_1.AppComponent]

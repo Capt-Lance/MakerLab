@@ -14,7 +14,7 @@ var CalendarComponent = (function () {
 CalendarComponent = __decorate([
     core_1.Component({
         selector: 'calendar',
-        templateUrl: "./calendar.html",
+        templateUrl: "src/app/calendar/calendar.html",
     })
 ], CalendarComponent);
 exports.CalendarComponent = CalendarComponent;

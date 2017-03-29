@@ -1,6 +1,13 @@
 <p>Welcome to the sign-in page</p>
-<label>Name</label>
-<input type="text" [(ngModel)]="userName">
+<label>First Name</label>
+<input type="text" [(ngModel)]="fName">
+
+<label>Last Name</label>
+<input type="text" [(ngModel)]="lName">
 
 <label> Password </label>
 <input type="password" [(ngModel)]="password">
+
+<label> Email </label>
+<input type="text" [(ngModel)]="email">
+<button routerLink="/calendar">Sign In </button>

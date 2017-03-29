@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: `src/app/sign-in/sign-in.html`,
 })
 export class SignInComponent  { 
-    private userName: string;
+    private fName: string;
+    private lName: string;
     private password: string;
     private email:string;
  }
